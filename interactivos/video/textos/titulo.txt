@@ -1,0 +1,3 @@
+'Escribe el título del vídeo'
+'Diagramas de Carroll y de Karnaugh'
+400

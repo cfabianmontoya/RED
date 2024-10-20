@@ -1,0 +1,2 @@
+'Escribe el número de respuestas'
+10

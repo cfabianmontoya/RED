@@ -1,0 +1,11 @@
+3
+'imagenes1/'
+'imagenes2/'
+'imagenes3/'
+'imagenes4/'
+'imagenes5/'
+'imagenes6/'
+'imagenes7/'
+'imagenes8/'
+'imagenes9/'
+'imagenes10/'

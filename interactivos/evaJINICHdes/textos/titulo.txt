@@ -1,0 +1,2 @@
+'Ingresa el título'
+'Lee el enunciado y usa los pulsadores para elegir el término asociado'

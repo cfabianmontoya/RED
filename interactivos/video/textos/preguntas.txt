@@ -1,0 +1,33 @@
+'Escribe las preguntas, luego cinco respuetas y luego el número que indica la posición de la respuesta correcta'
+'El nombre del profesor que aparece en el vídeo es:'
+'Albert Einstein'
+'Von Schmohawk'
+'Von Helmotz'
+'Von Braun'
+'Von Bonite'
+2
+
+'En la unión de conjuntos, los elementos contenidos son:'
+'Los del primer conjunto'
+'Los del segundo conjunto'
+'De cualquiera de los dos'
+'De ningún conjunto'
+'nulos'
+3
+
+'El complemento de A relativo a B, son todos los elementos que pertenecen:'
+'a B pero no a A'
+'a A pero no a B'
+'a ambos conjuntos'
+'a ninguno'
+'al universo'
+1
+
+'La diferencia simétrica de dos conjuntos es:'
+'La unión y la intersección de A y B'
+'La unión sin la intersección de A y B'
+'La intersección sin la unión de A y B'
+'La intersección de A y el universo'
+'La unión de B y el universo'
+2
+

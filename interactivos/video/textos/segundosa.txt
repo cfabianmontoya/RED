@@ -1,0 +1,6 @@
+'Escribe los segundos transcurridos desde el inicio del vídeo, para cada actividad interactiva'
+202
+223
+239
+257
+275

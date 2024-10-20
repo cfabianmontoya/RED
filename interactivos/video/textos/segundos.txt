@@ -1,0 +1,3 @@
+'Escribe los segundos transcurridos desde el inicio del vídeo, para cada pregunta (máximo cinco preguntas)'
+88
+138

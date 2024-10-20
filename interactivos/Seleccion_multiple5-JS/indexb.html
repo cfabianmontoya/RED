@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Asocia imágenes</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="e0e4e8">
+<ajs name="Descartes" width=790 height=500 code="Descartes">
+   <param name="tamaño" value="790x500">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="sonido" value="sí">
+   <param name="álgebra" value="sí">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='40' O.x='-50%' O.y='30%' imagen='images/fondo.png' despl_imagen='expand.' fondo='c6ae87' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='120' y='205+80*(pos1-1)' ancho='600' alto='80' imagen='images/postit1.png' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='E3' x='120' y='205+80*(pos2-1)' ancho='600' alto='80' imagen='images/postit2.png' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='E4' x='120' y='205+80*(pos3-1)' ancho='600' alto='80' imagen='images/postit3.png' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='E5' x='150' y='5' ancho='540' alto='192' imagen='images/postit600.png' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='g1' tipo='gráfico' espacio='E1' color='889d00' color-int='rojo' tamaño='14' expresión='(3,4)' dibujar-si='ppp'">
+   <param name="C_02" value="id='g2' tipo='gráfico' espacio='E1' color='889d00' color-int='rojo' tamaño='14' expresión='(3,2)' fijo='sí' dibujar-si='ppp'">
+   <param name="C_03" value="id='g3' tipo='gráfico' espacio='E1' color='889d00' color-int='rojo' tamaño='14' expresión='(3,0)' fijo='sí' dibujar-si='ppp'">
+   <param name="C_04" value="id='Verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(350,460,121,31)' fijo='sí' visible='sí' color='blanco' color-int='ff4a00' negrita='sí' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='verifica=1' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(verifica=0)&(r1+r2+r3>0)' pos_mensajes='centro'">
+   <param name="C_05" value="id='sigue' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='>' expresión='(760,478,21,21)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='18' imagen='images/btn_20x20.png' acción='calcular' parámetro='otro=otro+1\nL[1]=_length_(R[(otro-1)*4+1])\nL[1]=L[1]>35?35:L[1]\nL[1]=L[1]<10?10:L[1]\nL[2]=_length_(R[(otro-1)*4+2])\nL[2]=L[2]>35?35:L[2]\nL[2]=L[2]<10?10:L[2]\nL[3]=_length_(R[(otro-1)*4+3])\nL[3]=L[3]>35?35:L[3]\nL[3]=L[3]<10?10:L[3]\npos1=ent(rnd*3)+1\npos2=(pos1=3)?1:pos1+1\npos3=(pos2=3)?1:pos2+1\np=0\nq=0\nr1=0\nr2=0\nr3=0\nverifica=0\nE1.mouse_clicked=0' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='ppp' activo-si='verifica=1' pos_mensajes='centro'">
+   <param name="C_06" value="id='Resultado' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Resultados' expresión='(350,460,121,31)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='resultados=1\nvar1=buenas\nresultado1=(buenas*5)/ejercicios\nparent.set(&squot;var1&squot;,resultado1)\nparent.set(&squot;preg1&squot;,preg1)\nparent.update()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(otro=ejercicios)&(resultados=0)&(verifica=1)' pos_mensajes='centro'">
+   <param name="C_07" value="id='Otro ejercicio' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Otro ejercicio' expresión='(350,460,121,31)' fijo='sí' visible='sí' color='blanco' color-int='ff4a00' negrita='sí' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='otro=otro+1\nL[1]=_length_(R[(otro-1)*4+1])\nL[1]=L[1]>35?35:L[1]\nL[1]=L[1]<10?10:L[1]\nL[2]=_length_(R[(otro-1)*4+2])\nL[2]=L[2]>35?35:L[2]\nL[2]=L[2]<10?10:L[2]\nL[3]=_length_(R[(otro-1)*4+3])\nL[3]=L[3]>35?35:L[3]\nL[3]=L[3]<10?10:L[3]\npos1=ent(rnd*3)+1\npos2=(pos1=3)?1:pos1+1\npos3=(pos2=3)?1:pos2+1\np=0\nq=0\nr1=0\nr2=0\nr3=0\nverifica=0\nE1.mouse_clicked=0' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(otro<ejercicios)&(verifica=1)' activo-si='verifica=1' pos_mensajes='centro'">
+   <param name="A_01" value="id='P' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='P[0]=0;P[1]=0;P[2]=0' archivo='textos/preguntas.txt'">
+   <param name="A_02" value="id='R' vector='sí' evaluar='una-sola-vez' tamaño='ejercicios*4+1' expresión='R[0]=0;R[1]=0;R[2]=0' archivo='textos/respuestas.txt'">
+   <param name="A_03" value="id='L' vector='sí' evaluar='una-sola-vez' tamaño='5' expresión='L[0]=0;L[1]=0;L[2]=0'">
+   <param name="A_04" value="id='Inicio' algoritmo='sí' evaluar='una-sola-vez' hacer='otro=1;pos1=ent(rnd*3)+1;pos2=(pos1=3)?1:pos1+1;pos3=(pos2=3)?1:pos2+1;px1=2.5;px2=px1+5;preg1=P[0];;L[1]=_length_(R[(otro-1)*4+1]);L[1]=L[1]>35?35:L[1];L[1]=L[1]<10?10:L[1];L[2]=_length_(R[2]);L[2]=L[2]>35?35:L[2];L[2]=L[2]<10?10:L[2];L[3]=_length_(R[3]);L[3]=L[3]>35?35:L[3];L[3]=L[3]<10?10:L[3]'">
+   <param name="A_05" value="id='a5' algoritmo='sí' evaluar='siempre' hacer='kk=E1.mouse_clicked;g1.x=2;g1.y=4;g2.x=2;g2.y=2;g3.x=2;g3.y=0'">
+   <param name="A_06" value="id='e1' evento='sí' condición='kk&(verifica=0)' acción='calcular' parámetro='p=E1.mouse_x\nq=E1.mouse_y\nactiva1=((p-2)^2+(q-4)^2<1^2)\nactiva2=((p-2)^2+(q-2)^2<1^2)\nactiva3=((p-2)^2+(q-0)^2<1^2)' parámetro.fuente='Monospaced,PLAIN,12' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_07" value="id='e2' evento='sí' condición='activa1' acción='calcular' parámetro='r1=(r1=1)?0:r1+1\nactiva1=0\np=0\nq=0\nr2=0\nr3=0' parámetro.fuente='Monospaced,PLAIN,12' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_08" value="id='e3' evento='sí' condición='activa2' acción='calcular' parámetro='r2=(r2=1)?0:r2+1\nactiva2=0\np=0\nq=0\nr1=0\nr3=0' parámetro.fuente='Monospaced,PLAIN,12' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_09" value="id='e4' evento='sí' condición='activa3' acción='calcular' parámetro='r3=(r3=1)?0:r3+1\nactiva3=0\np=0\nq=0\nr2=0\nr1=0' parámetro.fuente='Monospaced,PLAIN,12' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_10" value="id='Calculos' algoritmo='sí' evaluar='siempre' hacer='ejercicios=P[0];rta=R[(otro-1)*4+4];rta2=pos1-1+rta;rta2=(rta2=4)?1:rta2;rta2=(rta2=5)?2:rta2;correcto=((rta2=1)&(r1=1))|((rta2=2)&(r2=1))|((rta2=3)&(r3=1));px1=2.5+5*(rta2-1);px2=px1+5;'">
+   <param name="A_11" value="id='e10' evento='sí' condición='r1|r2|r3' acción='calcular' parámetro='correcto=((rta2=1)&(r1=1))|((rta2=2)&(r2=1))|((rta2=3)&(r3=1))\n' parámetro.fuente='Monospaced,PLAIN,12' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_12" value="id='e11' evento='sí' condición='(correcto=1)&(verifica=1)' acción='calcular' parámetro='buenas=buenas+1\n' parámetro.fuente='Monospaced,PLAIN,12' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='arco' color='336c00' centro='(2,4)' radio='.4' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='2'">
+   <param name="G_02" value="espacio='E1' tipo='arco' color='336c00' dibujar-si='r1' centro='(2,4)' radio='.32' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' relleno='336c00' ancho='2'">
+   <param name="G_03" value="espacio='E1' tipo='arco' color='336c00' centro='(2,2)' radio='.4' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='2'">
+   <param name="G_04" value="espacio='E1' tipo='arco' color='336c00' dibujar-si='r2' centro='(2,2)' radio='.32' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' relleno='336c00' ancho='2'">
+   <param name="G_05" value="espacio='E1' tipo='arco' color='336c00' centro='(2,0)' radio='.4' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='2'">
+   <param name="G_06" value="espacio='E1' tipo='arco' color='336c00' dibujar-si='r3' centro='(2,0)' radio='.32' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' relleno='336c00' ancho='2'">
+   <param name="G_07" value="espacio='E5' tipo='texto' color='00d6ff' expresión='[10,60,520,40]' texto='[P[otro]]' fuente='SansSerif,BOLD,24' fijo='sí' ancho='520' color_borde_texto='negro'">
+   <param name="G_08" value="espacio='E1' tipo='texto' expresión='[250,135]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs40\b  \cf0\fs44\b0 Selecciona la respuesta correcta\cf1\f3\fs24}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='negro' expresión='[15,25,545,30]' texto='[R[(otro-1)*4+1]]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='545'">
+   <param name="G_10" value="espacio='E3' tipo='texto' color='negro' expresión='[15,25,545,30]' texto='[R[(otro-1)*4+2]]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='545'">
+   <param name="G_11" value="espacio='E4' tipo='texto' color='negro' expresión='[15,25,545,30]' texto='[R[(otro-1)*4+3]]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='545'">
+   <param name="G_12" value="espacio='E1' tipo='texto' expresión='[670,475]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs40{\*\mjaformula{\expr otro\decimals 0\fixed1}} de  {\*\mjaformula{\expr ejercicios\decimals 0\fixed1}}\fs44\i }' fuente='Times New Roman,PLAIN,20' fijo='sí'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto=0)&(resultados=0)&(otro<ejercicios)' expresión='[21,440]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;}\f1\fs44\b\cf0\u161 No es correcto!\par Pasa a la siguiente pregunta\cf1\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='sí'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto=0)&(resultados=0)&(otro<ejercicios)' expresión='[20,441]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;}\cf0\f1\fs44\b\u161 No es correcto!\par Pasa a la siguiente pregunta\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='sí'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto)&(resultados=0)&(otro<ejercicios)' expresión='[21,441]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;\red0\green0\blue0;}\cf0\f1\fs44\b         \cf1  \u161 EXCELENTE!\par Pasa a la siguiente pregunta\cf0\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='sí'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto)&(resultados=0)&(otro<ejercicios)' expresión='[20,440]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;\red0\green135\blue0;}\cf0\f1\fs44\b        \cf1   \u161 EXCELENTE!\par Pasa a la siguiente pregunta\cf0\f2\fs24\b0}' fuente='SansSerif,BOLD,22' fijo='sí'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='(resultados=1)&(buenas>2)' expresión='[180,460]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs44 Lograste  {\*\mjaformula{\expr buenas\decimals 0\fixed1}} respuestas correctas de  {\*\mjaformula{\expr ejercicios\decimals 0\fixed1}}\par \f2\fs44\i}' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='(resultados=1)&(buenas=1)' expresión='[120,445]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red255\green0\blue0;\red0\green0\blue255;}\f1\fs40\cf0 Es lamentable, s\u243 lo lograste\par una respuesta correcta de  {\*\mjaformula{\expr ejercicios\decimals 0\fixed1}}\cf1\f2\fs44\i }' fuente='Arial,PLAIN,20' fijo='sí'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='(resultados=1)&(buenas=0)' expresión='[120,445]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red255\green0\blue0;\red0\green0\blue255;}\f1\fs40\cf0\u161 Debes preparte mejor !, no lograste\par obtener una respuesta correcta de  {\*\mjaformula{\expr ejercicios\decimals 0\fixed1}}\cf1\f2\fs44\i }' fuente='Arial,PLAIN,20' fijo='sí'">
+   <param name="G_20" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto=0)&(resultados=0)&(otro=ejercicios)' expresión='[81,441]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;}\f1\fs44\b\cf0\u161 No es correcto!\par Consulta tus resultados\cf1\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='sí'">
+   <param name="G_21" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto=0)&(resultados=0)&(otro=ejercicios)' expresión='[80,440]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;}\cf0\f1\fs44\b\u161 No es correcto!\par Consulta tus resultados\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='sí'">
+   <param name="G_22" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto)&(resultados=0)&(otro=ejercicios)' expresión='[81,441]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;\red0\green0\blue0;}\cf0\f1\fs44\b         \cf1  \u161 EXCELENTE!\par Consulta tus resultados\cf0\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='sí'">
+   <param name="G_23" value="espacio='E1' tipo='texto' dibujar-si='verifica&(correcto)&(resultados=0)&(otro=ejercicios)' expresión='[80,440]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;\red0\green129\blue0;}\cf0\f1\fs44\b         \cf1  \u161 EXCELENTE!\par Consulta tus resultados\cf0\f2\fs24\b0}' fuente='SansSerif,BOLD,22' fijo='sí'">
+   <param name="G_24" value="espacio='E1' tipo='arco' color='336c00' dibujar-si='verifica&(correcto=0)' centro='(2,4-2*(rta2-1))' radio='.6' fin='360' fuente='Monospaced,PLAIN,12' fijo='sí' relleno='a500ff00' ancho='2'">
+   <param name="G_25" value="espacio='E1' tipo='texto' expresión='[20,820]' texto='[buenas]' fijo='sí'">
+</ajs>
+<script type="descartes/vectorFile" id="textos/preguntas.txt">
+
+10
+
+'Las Características Generales de los Instrumentos de Medición son:'
+'El Campo de Indicación de un Instrumento es:'
+'El SPAN, característica general de un instrumento de medida es:'
+'El SPAN de un Indicador de Presión, que tiene como Campo de Indicación ( - 5 ; 25 ) PSI es:'
+'Cuál es respectivamente el Campo de Indicación y el Span del Instrumento que puede medir y/o indicar un valor mínimo de Temperatura de 3°C y un valor máximo de 127°C'
+'El Campo de Medida en un Instrumento Industrial es:'
+'EL Campo de Medida del siguiente Instrumento Medidor Indicador de Presión que tiene como campo de indicación  ( 0 – 20 ) PSI es:'
+'Una de las importancias que tiene el campo de medida en un instrumento de medición industrial es:'
+'El Campo de Indicación más apropiado del Instrumento  para medir una Velocidad de  60 rpm es:'
+'El Campo de Indicación más apropiado del Instrumento  para medir en un proceso una Corriente de 14 mA es:'
+
+
+</script>
+<script type="descartes/vectorFile" id="textos/respuestas.txt">
+'Escribe las tres respuestas de cada pregunta y la posición de la respuesta correcta'
+
+'Calidad, Precio, Material.'
+'Campo de Indicación o Rango , Intervalo o Span, Campo de Medida, Error, Exactitud.'
+'Fabricante, Fecha de fabricación, Empresa.'
+2
+
+
+
+
+'Valores que pueden ser Medidos y/o indicados por los instrumentos, se indica (Linf ; Lsup).'
+'Es la parte principal donde debe de ser ubicado el instrumento para que pueda medir e indicar el valor de la variable'
+'Conjunto de valores comprendidos entre el 25% y el 75% del campo de indicación'
+1
+
+'Conjunto de valores que pueden ser Medidos y/o Indicados por los Instrumentos'
+'Error máximo permitido por el Instrumento para la medición de la variable'
+'Diferencia entre Lím. superior y el Lím. Inferior del Campo de Indicación del Instrumento.'
+3
+
+'30 PSI'
+'20 PSI'
+'Ambos'
+1
+
+'(127; 3) grados centígrados.     124 grados'
+'(3; 127) grados centígrados.     130 grados'
+'(3; 127) grados centígrados.     124 grados'
+3
+
+'Lugar más adecuado donde se debe de utilizar el instrumento para la medición de una variable'
+'Conjunto de valores que pueden ser medidos y/o indicados por el instrumento'
+'Conjunto de valores que están comprendidos entre el 25% y el 75% del Campo de Indicación.'
+3
+
+'( 5  –  15 ) PSI'
+'( 2.5  –  17.5 ) PSI'
+'(0  –  20 ) PSI'
+1
+
+'Permite determinar la relación espacio-tiempo en el proceso'
+'Los fabricantes me garantizan la exactitud del instrumento en la medición de la variable entre los valores del campo de indicación'
+'Nos permite medir en todo el campo de indicación'
+2
+
+'( 0 - 60) RPM'
+'( 60- 120) RPM'
+'( 0 - 120) RPM'
+3
+
+'( 0 - 28) V'
+'(0 - 28) mA'
+'( 0- 15 ) mA'
+2
+
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+5
+
+'La capital de Colombia'
+'La capital de Francia'
+'5+8-10'
+'Un pasado el verbo cantar'
+'Es un cuadrilátero'

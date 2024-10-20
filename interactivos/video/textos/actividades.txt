@@ -1,0 +1,2 @@
+'Escribe los nombres de las actividades a usar'
+'Colorea2_Europa-JS'

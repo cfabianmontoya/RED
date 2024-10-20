@@ -1,0 +1,3 @@
+'Escribe los nombres de las plantillas a usar por cada pregunta'
+'Seleccion_multiple2_1'
+'Seleccion_multiple2_2'

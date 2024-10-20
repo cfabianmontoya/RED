@@ -1,0 +1,13 @@
+ El volumen de la unidad E es VBOX_Desktop
+ El n£mero de serie del volumen es: 0E00-0002
+
+ Directorio de e:\WEB\JLA\2015\SEB_2\PLANTILLA_Alfa\escenas\images
+
+03/03/2015  10:10            67.386 ninyo_asombrado.png
+03/03/2015  10:10            67.386 ninyo_parado.png
+03/03/2015  10:10            67.386 ninyo_pensando.png
+03/03/2015  10:10            67.386 ninyo_saludando.png
+03/03/2015  10:10            67.386 ninyo_senalando.png
+03/03/2015  10:10            67.386 ninyo_tablet.png
+               6 archivos        404.316 bytes
+               0 dirs  528.980.000.768 bytes libres

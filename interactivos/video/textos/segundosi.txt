@@ -1,0 +1,5 @@
+'Escribe los segundos transcurridos desde el inicio del vídeo, para cada actividad interactiva'
+15
+50
+120
+229

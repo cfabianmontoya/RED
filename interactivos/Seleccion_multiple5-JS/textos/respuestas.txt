@@ -1,0 +1,26 @@
+'Escribe las tres respuestas de cada pregunta y la posición de la respuesta correcta'
+
+'Medellín'
+'Bogotá'
+'Estambul'
+2
+
+'Madrid'
+'Bogotá'
+'París'
+3
+
+3
+-3
+23
+1
+
+'cantaré'
+'cantó'
+'canta'
+2
+
+'triángulo'
+'rombo'
+'cubo'
+2

@@ -1,0 +1,2 @@
+'Escribe el número de preguntas a realizar, debe ser menor o igual al tamaño del banco '
+12

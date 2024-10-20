@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="e0e4e8">
+
+
+<ajs name="Descartes" width=870 height=600 code="Descartes">
+   <param name="tamaño" value="870x600">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.335, 2015-01-12">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='50' O.x='-50%' O.y='50%' despl_imagen='expand.' fondo='999694' red='no' red10='no' ejes='no' texto='no' sensible_a_los_movimientos_del_ratón='sí'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='E2' x='2' y='50' ancho='863' alto='495' dibujar-si='(muestra!=3)&(muestra!=1)' despl_imagen='arr-izq' archivo='ivideo.html'">
+   <param name="E_03" value="tipo='R2' id='mascara' x='2' y='50' ancho='863' alto='495' fijo='sí' escala='50' O.x='-50%' O.y='50%' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='HTMLIFrame' id='e1' x='40' y='45' ancho='790' alto='500' dibujar-si='(muestra=2)' despl_imagen='arr-izq' archivo='[archivo[pr]]'">
+   <param name="E_05" value="tipo='HTMLIFrame' id='e2' x='40' y='45' ancho='790' alto='500' dibujar-si='(muestra=3)' despl_imagen='arr-izq' archivo='[escena[act]]'">
+   <param name="E_06" value="tipo='R2' id='E0' x='10%' y='13%' ancho='80%' alto='70%' dibujar-si='(inicia=0)|((ent(tiempo1)=ent(tiempo2))&(tiempo1>2))' fijo='sí' despl_imagen='arr-izq' fondo='23808080' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='Inicio' tipo='numérico' interfaz='botón' región='interior' espacio='E0' nombre='Clic para reproducir el vídeo' expresión='((E0._w-260)/2,E0._h-50,260,40)' fijo='sí' visible='sí' color='blanco' color-int='e08b00' fuente puntos='20' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='accion2=&squot;seguir&squot;\ncontroles2()\ninicia=1\n\n\n\n' dibujar-si='inicia=0' activo-si='accion!=&squot;parar&squot;'">
+   <param name="C_02" value="id='play' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(5,545,48,48)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='20' imagen='imagenes/play2.png' acción='calcular' parámetro='accion2=(accion2=&squot;parar&squot;)?&squot;seguir&squot;:&squot;parar&squot;\ncontroles2()\n\n\n\n' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(accion2=&squot;parar&squot;)' activo-si='accion!=&squot;parar&squot;' pos_mensajes='centro'">
+   <param name="C_03" value="id='pause' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(5,545,48,48)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='20' imagen='imagenes/pause.png' acción='calcular' parámetro='accion2=(accion2=&squot;parar&squot;)?&squot;seguir&squot;:&squot;parar&squot;\ncontroles2()\n\n\n\n' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(accion2=&squot;seguir&squot;)' activo-si='accion!=&squot;parar&squot;' pos_mensajes='centro'">
+   <param name="C_04" value="id='volumen' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(590,545,48,48)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='20' imagen='imagenes/volumen.png' acción='calcular' parámetro='E2.set(&squot;cambia_volumen&squot;,0)\nsilencio=1\n\n\n' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(silencio=0)' activo-si='accion!=&squot;parar&squot;' pos_mensajes='centro'">
+   <param name="C_05" value="id='silencio' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(590,545,48,48)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='20' imagen='imagenes/silencio.png' acción='calcular' parámetro='E2.set(&squot;cambia_volumen&squot;,(sonido.x+9)*20)\nsilencio=0\n\n\n' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(silencio=1)' activo-si='accion!=&squot;parar&squot;' pos_mensajes='centro'">
+   <param name="C_06" value="id='g' tipo='gráfico' espacio='E1' color='cfffffff' color-int='b7ffffff' tamaño='18' expresión='(-8,-3.8)' constricción='y=-4' fijo='sí' dibujar-si='pp'">
+   <param name="C_07" value="id='sonido' tipo='gráfico' espacio='E1' color='blanco' color-int='blanco' tamaño='16' expresión='(15,.6)' constricción='(y=.6)' fijo='sí' dibujar-si='pp'">
+   <param name="C_08" value="id='continuar_i' tipo='numérico' interfaz='botón' región='interior' espacio='mascara' expresión='(mascara._w-45,mascara._h-45,40,40)' fijo='sí' visible='sí' color='negro' color-int='fff0f8ff' negrita='sí' fuente puntos='18' imagen='imagenes/cerrar.png' acción='calcular' parámetro='accion=&squot;seguir&squot;\ncontroles()\nmuestra=0\ni=i+1\nt_info[i-1]=2000\n\n\n' dibujar-si='muestra=1' pos_mensajes='centro'">
+   <param name="C_09" value="id='continuar_act' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Continuar vídeo' expresión='(E1._w-160,550,150,40)' fijo='sí' visible='sí' color='blanco' color-int='azul' negrita='sí' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='accion=&squot;seguir&squot;\ncontroles()\nmuestra=0\nact=act+1\nt_actividad[act-1]=2000\n\n\n' dibujar-si='(muestra=3)' pos_mensajes='centro'">
+   <param name="C_10" value="id='Reinicia' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='((E1._w-120)/2,560,120,30)' fijo='sí' visible='sí' color='blanco' color-int='7c5959' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='inicio' parámetro='\n\n' dibujar-si='(tiempo1=_Eval_(t2))&(tiempo1>0)' activo-si='accion!=&squot;parar&squot;' pos_mensajes='centro'">
+   <param name="C_11" value="id='continuar_pr1' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Continuar vídeo' expresión='(E1._w-160,550,150,40)' fijo='sí' visible='sí' color='blanco' color-int='azul' negrita='sí' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='accion=&squot;seguir&squot;\ncontroles()\nmuestra=0\nvar1=&squot;&squot;\npr=pr+1\nrta=0\nt_pregunta[pr-1]=2000\n\n\n' dibujar-si='(muestra=2)&(var1!=&squot;&squot;)' pos_mensajes='centro'">
+   <param name="C_12" value="id='final' tipo='numérico' interfaz='botón' región='interior' espacio='E0' nombre='Ver nota' expresión='((E0._w-120)/2,280,120,40)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='20' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='verp=1' dibujar-si='(ent(tiempo1)=ent(tiempo2))&(tiempo1>2)&(verp=0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='t_info' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='t_info[0]=0;t_info[1]=0;t_info[2]=0' archivo='textos/segundosi.txt'">
+   <param name="A_02" value="id='t_pregunta' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='t_pregunta[0]=0;t_pregunta[1]=0;t_pregunta[2]=0' archivo='textos/segundos.txt'">
+   <param name="A_03" value="id='t_actividad' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='t_actividad[0]=0;t_actividad[1]=0;t_actividad[2]=0' archivo='textos/segundosa.txt'">
+   <param name="A_04" value="id='imagenes' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='imagenes[0]=0;imagenes[1]=&squot;informacion/i1.jpg&squot;;imagenes[2]=&squot;informacion/i2.jpg&squot;;imagenes[3]=&squot;informacion/i3.jpg&squot;;imagenes[4]=&squot;informacion/i4.jpg&squot;;imagenes[5]=&squot;informacion/i5.jpg&squot;;imagenes[6]=&squot;informacion/i6.jpg&squot;;imagenes[7]=&squot;informacion/i7.jpg&squot;;imagenes[8]=&squot;informacion/i8.jpg&squot;;imagenes[9]=&squot;informacion/i9.jpg&squot;;imagenes[10]=&squot;informacion/i10.jpg&squot;;'">
+   <param name="A_05" value="id='AC' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='AC[0]=0;AC[1]=0;AC[2]=0' archivo='textos/actividades.txt'">
+   <param name="A_06" value="id='R' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='R[0]=0;R[1]=0;R[2]=0'">
+   <param name="A_07" value="id='B' vector='sí' evaluar='una-sola-vez' tamaño='21' expresión='B[0]=0;B[1]=0;B[2]=0'">
+   <param name="A_08" value="id='PL' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='PL[0]=0;PL[1]=0;PL[2]=0' archivo='textos/plantillas.txt'">
+   <param name="A_09" value="id='archivo' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='archivo[0]=0;archivo[1]=0;archivo[2]=0'">
+   <param name="A_10" value="id='promedio' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='promedio[0]=0;promedio[1]=0;promedio[2]=0'">
+   <param name="A_11" value="id='cambiar()' algoritmo='sí' algoritmo='sí' hacer='E2.set(&squot;cambia_idYouTube&squot;,url);cambia=0'">
+   <param name="A_12" value="id='parada()' algoritmo='sí' algoritmo='sí' hacer='accion=&squot;parar&squot;;E2.set(&squot;play_pause&squot;,accion);g.x=-4;'">
+   <param name="A_13" value="id='controles()' algoritmo='sí' algoritmo='sí' hacer='E2.set(&squot;play_pause&squot;,accion);;'">
+   <param name="A_14" value="id='controles2()' algoritmo='sí' algoritmo='sí' hacer='E2.set(&squot;play_pause&squot;,accion2);avanzado=(accion2=&squot;parar&squot;)?tiempo1:avanzado;g.x=-4;'">
+   <param name="A_15" value="id='formato_tiempo()' algoritmo='sí' algoritmo='sí' hacer='t1_segundos=_Eval_(t);t1_horas=ent(t1_segundos/3600);t1_minutos=ent(t1_segundos/60);t1_segundos=t1_segundos%60;;horas=ent(tiempo1/3600);minutos=ent(tiempo1/60);segundos=tiempo1%60;temporizador=&squot;&squot;+horas+&squot;:&squot;+((minutos<10)?&squot;0&squot;+minutos:minutos)+&squot;:&squot;+((segundos<10)?&squot;0&squot;+segundos:segundos);horas2=ent(tiempo2/3600);minutos2=ent(tiempo2/60);segundos2=tiempo2%60;duracion_video=&squot;&squot;+horas2+&squot;:&squot;+((minutos2<10)?&squot;0&squot;+minutos2:minutos2)+&squot;:&squot;+((segundos2<10)?&squot;0&squot;+segundos2:segundos2);;;'">
+   <param name="A_16" value="id='continuar()' algoritmo='sí' algoritmo='sí' hacer='accion=&squot;seguir&squot;;E2.set(&squot;play_pause&squot;,accion)'">
+   <param name="A_17" value="id='T' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='T[0]=0;T[1]=0;T[2]=0' archivo='textos/titulo.txt'">
+   <param name="A_18" value="id='Rp' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='Rp[0]=0;Rp[1]=0;Rp[2]=0'">
+   <param name="A_19" value="id='calcula_preguntas()' algoritmo='sí' algoritmo='sí' inicio='kk=0' hacer='kk=kk+1;npreguntas=npreguntas+(t_pregunta[kk]>0)' mientras='kk<11'">
+   <param name="A_20" value="id='calcula_actividades()' algoritmo='sí' algoritmo='sí' inicio='kkk=0' hacer='kkk=kkk+1;nactividades=nactividades+(t_actividad[kkk]>0)' mientras='kkk<11'">
+   <param name="A_21" value="id='calcula_plantillas()' algoritmo='sí' algoritmo='sí' inicio='zz=0' hacer='zz=zz+1;archivo[zz]=PL[zz]+&squot;/indexb.html&squot;' mientras='zz<npreguntas'">
+   <param name="A_22" value="id='calcula_escenas()' algoritmo='sí' algoritmo='sí' inicio='ff=0' hacer='ff=ff+1;escena[ff]=AC[ff]+&squot;/index.html&squot;' mientras='ff<nactividades'">
+   <param name="A_23" value="id='V' vector='sí' evaluar='una-sola-vez' expresión='V[0]=0;V[1]=0;V[2]=0' archivo='textos/video.txt'">
+   <param name="A_24" value="id='calcula_mensajes()' algoritmo='sí' algoritmo='sí' hacer='mensaje1=(npreguntas=1)?&squot;una evaluación&squot;:mensaje1;mensaje1=(npreguntas=2)?&squot;dos evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=3)?&squot;tres evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=4)?&squot;cuatro evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=5)?&squot;cinco evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=6)?&squot;seis evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=7)?&squot;siete evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=8)?&squot;ocho evaluaciones&squot;:mensaje1;mensaje1=(npreguntas=9)?&squot;nueve evaluaciones&squot;:mensaje1;mensaje1=(npreguntas>9)? npreguntas+&squot; evaluaciones&squot;:mensaje1;mensaje1=(t_pregunta[1]>990)?&squot;&squot;:mensaje1;;mensaje2=(nactividades=1)?&squot;una escena interactiva&squot;:mensaje2;mensaje2=(nactividades=2)?&squot;dos escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=3)?&squot;tres escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=4)?&squot;cuatro escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=5)?&squot;cinco escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=6)?&squot;seis escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=7)?&squot;siete escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=8)?&squot;ocho escenas interactivas&squot;:mensaje2;mensaje2=(nactividades=9)?&squot;nueve escenas interactivas&squot;:mensaje2;mensaje2=(nactividades>9)? nactividades+&squot; escenas interactivas&squot;:mensaje2;mensaje2=(t_pregunta[1]<990)?&squot;y &squot;+mensaje2:mensaje2;mensaje2=(t_actividad[1]>990)?&squot;&squot;:mensaje2'">
+   <param name="A_25" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='url=V[1];mensaje=&squot;&squot;;muestra=0;i=1;pr=1;act=1;cambia=0;t=&squot;parar&squot;;t2=&squot;duracion&squot;;var1=&squot;&squot;;k=1;calcula_preguntas();calcula_actividades();calcula_plantillas();calcula_escenas();calcula_mensajes();tiempo2=3;;;'">
+   <param name="A_26" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='tiempo1=_Eval_(t);tiempo2=_Eval_(t2);tiempo_reproduccion=_Eval_(t2);;formato_tiempo();t1=abs(tiempo1-tiempo[otro]);g.x=(g.x<-8)?-8:g.x;g.x=(g.x>-4)?-4:g.x;barra=(accion=&squot;parar&squot;)|(accion2=&squot;parar&squot;)?E2.set(&squot;actualizar_tiempo&squot;,(g.x+9)*avanzado/5):0;sonido.x=(sonido.x<13)?13:sonido.x;sonido.x=(sonido.x>17)?17:sonido.x;volu=(silencio=1)?E2.set(&squot;cambia_volumen&squot;,0):E2.set(&squot;cambia_volumen&squot;,(sonido.x-13)*25);;;;cambia=(tiempo1>3)?0:cambia;;;;;;;;;;;'">
+   <param name="A_27" value="id='para' evento='sí' condición='(ent(tiempo1)=ent(t_info[i]))|(ent(tiempo1)=ent(t_pregunta[pr]))|(ent(tiempo1=t_actividad[act]))' acción='calcular' parámetro='avanzado=tiempo1\nmuestra=(tiempo1=t_info[i])?1:muestra\nmuestra=(tiempo1=t_pregunta[pr])?2:muestra\nmuestra=(tiempo1=t_actividad[act])?3:muestra\nevalua=(muestra>0)\nparada()' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_28" value="id='Cambia_tiempo_inicio' evento='sí' condición='tiempo1>3' acción='calcular' parámetro='E2.set(&squot;cambia_idYouTube&squot;,url)\nE2.set(&squot;actualizar_tiempo&squot;,0)\ncambia=0\n' ejecución='una-sola-vez' pos_mensajes='centro'">
+   <param name="A_29" value="id='e5' evento='sí' condición='var1!=&squot;&squot;' acción='calcular' parámetro='buenas=buenas+var1\nsuma=suma+1\npromedio=ent(buenas/suma+.5)\npromedio[pr]=var1' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E0' tipo='texto' color='ffb35c' dibujar-si='(muestra=0)&(tiempo1<tiempo2-3)&(verp=0)' expresión='[60,180,580,100]' texto='En este vídeo tendrás [mensaje1] [mensaje2] durante la reproduccion del vídeo.\n\nLas marcas naranja y verde en la línea de tiempo, indican el momento en que se harán las evaluaciones o se presentarán las actividades respectivamente. La marca azul indica el momento que se muestra información complementaria al vídeo.\n\n' fuente='SansSerif,BOLD,22' decimales='evaluiaci0' fijo='sí' ancho='580' color_borde_texto='negro'">
+   <param name="G_02" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='((accion=&squot;parar&squot;)|(accion2=&squot;parar&squot;))&(muestra=0)&(muestra=0)' expresión='(-8,-4)(g.x,-4)' fijo='sí' tamaño='1' ancho='8'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' color='gris' dibujar-si='((accion=&squot;parar&squot;)|(accion2=&squot;parar&squot;))&(muestra=0)' expresión='(g.x,-4)(-4,-4)' fijo='sí' tamaño='1' ancho='8'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(silencio=0)&(muestra=0)' expresión='(-9,1,.5,.5)' archivo='imagenes/sonido.png'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' color='a3a3aa' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(silencio=0)&(muestra=0)' expresión='(13,.6)(17,.6)' fijo='sí' tamaño='1' ancho='8'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='negro' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(silencio=0)&(muestra=0)' expresión='(13,.6)(sonido.x,.6)' fijo='sí' tamaño='1' ancho='8'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='((accion=&squot;parar&squot;)|(accion2=&squot;parar&squot;))&(muestra=0)&(muestra=0)' expresión='(g.x-.25,g.y+.25)' archivo='imagenes/boton.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='(muestra=0)&(tiempo1>1)&(tiempo1<tiempo2)&(silencio=0)&(muestra=0)' expresión='(sonido.x-.125,sonido.y+.25)' archivo='imagenes/boton_sonido.png'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='(tiempo1>0)&(tiempo1<tiempo2)&(cambia=0)&(muestra=0)' expresión='[E1._w-161,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36{\*\mjaformula{\expr temporizador\decimals 0\fixed1}/{\expr duracion_video\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='(tiempo1>0)&(tiempo1<tiempo2)&(cambia=0)&(muestra=0)' expresión='[E1._w-160,31]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green126\blue255;}\f1\fs36{\*\mjaformula\cf0{\expr temporizador\decimals 0\fixed1}/{\expr duracion_video\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_11" value="espacio='mascara' tipo='imagen' dibujar-si='muestra=1' expresión='(E1._w/100,E1._h/100-1,1,1)' archivo='imagenes[i]'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' dibujar-si='muestra=1' expresión='(-6.4,-5,.6,.3)' archivo='imagenes/postith205.png'">
+   <param name="G_13" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='muestra=1' expresión='[20,20,870,20]' texto='¡Para saber más!' fuente='SansSerif,BOLD,30' fijo='sí' ancho='870'">
+   <param name="G_14" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='muestra=1' expresión='[0,510,870,15]' texto='¡Haz clic en la x para continuar con el vídeo!' fuente='SansSerif,BOLD,20' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_15" value="espacio='E1' tipo='imagen' dibujar-si='(var1!=&squot;&squot;)&(var1<10)' expresión='(-9,-2.9,1,1)' archivo='imagenes/mal.png'">
+   <param name="G_16" value="espacio='E1' tipo='imagen' dibujar-si='(var1=10)&(muestra=2)' expresión='(-9.2,-3.4,-.8,.8)' archivo='imagenes/bien.png'">
+   <param name="G_17" value="espacio='E1' tipo='imagen' dibujar-si='(var1=&squot;&squot;)&(muestra>0)' expresión='(-7,-.5,-1,1)' archivo='imagenes/question.png'">
+   <param name="G_18" value="espacio='E1' tipo='texto' color='verde' dibujar-si='(var1=&squot;&squot;)&(muestra=2)' expresión='[0,20,870,15]' texto='EVALUACIÓN [pr]' fuente='SansSerif,BOLD,28' decimales='EVALUACIÓN0' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_19" value="espacio='E1' tipo='texto' color='rojo' dibujar-si='(var1!=&squot;&squot;)&(var1<10)' expresión='[0,10,870,25]' texto='¡Debes mejorar! Tu nota para esta evaluación es: [var1]' fuente='SansSerif,BOLD,26' decimales='0' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_20" value="espacio='E1' tipo='texto' color='verde' dibujar-si='(var1>0)&(var1=10)' expresión='[0,10,870,25]' texto='¡Excelente! Tu nota para esta evaluación es: [var1]' fuente='SansSerif,BOLD,28' decimales='0' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_21" value="espacio='E1' tipo='texto' color='verde' dibujar-si='(muestra=3)' expresión='[0,40,870,15]' texto='¡Actividad interactiva!\n' fuente='SansSerif,BOLD,28' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_22" value="espacio='E1' tipo='texto' color='turquesa' dibujar-si='(muestra=3)' expresión='[0,560,870,25]' texto='Realiza la actividad y luego haz clic para continuar el vídeo.' fuente='SansSerif,BOLD,18' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_23" value="espacio='E1' tipo='segmento' color='grisObscuro' dibujar-si='(cambia=0)&(muestra=0)' expresión='(.2,1.2)(E1._w/50-.2,1.2)' fijo='sí' tamaño='1' ancho='6'">
+   <param name="G_24" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='(cambia=0)&(muestra=0)' expresión='(0.2,1.2)(-.2+tiempo1*(E1._w/50)/tiempo2,1.2)' fijo='sí' tamaño='1' ancho='6'">
+   <param name="G_25" value="espacio='E1' tipo='segmento' color='ff7600' dibujar-si='(t_pregunta[s]>0)&(tiempo1>1)&(cambia=0)&(muestra=0)' expresión='(-.2+t_pregunta[s]*(E1._w/50)/tiempo2,1)(-.2+t_pregunta[s]*(E1._w/50)/tiempo2,1.4)' familia='s' s.intervalo='[1,11]' s.pasos='10' fijo='sí' tamaño='1' ancho='3'">
+   <param name="G_26" value="espacio='E1' tipo='segmento' color='00a300' dibujar-si='(t_actividad[s]>0)&(tiempo1>1)&(cambia=0)&(muestra=0)' expresión='(-.2+t_actividad[s]*(E1._w/50)/tiempo2,1)(-.2+t_actividad[s]*(E1._w/50)/tiempo2,1.4)' familia='s' s.intervalo='[1,11]' s.pasos='10' fijo='sí' tamaño='1' ancho='3'">
+   <param name="G_27" value="espacio='E1' tipo='segmento' color='azul' dibujar-si='(t_info[s]>0)&(tiempo1>1)&(cambia=0)&(muestra=0)' expresión='(-.2+t_info[s]*(E1._w/50)/tiempo2,1)(-.2+t_info[s]*(E1._w/50)/tiempo2,1.4)' familia='s' s.intervalo='[1,11]' s.pasos='10' fijo='sí' tamaño='1' ancho='3'">
+   <param name="G_28" value="espacio='E1' tipo='imagen' dibujar-si='(tiempo1>0)&(cambia=0)&(muestra=0)&(tiempo1>2)' expresión='(-.2+tiempo1*(E1._w/50)/tiempo2,1.2,.7,.7)' archivo='imagenes/boton.png'">
+   <param name="G_29" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='muestra=0' expresión='[0,20,870,20]' texto='[T[1]]' fuente='SansSerif,BOLD,34' fijo='sí' ancho='870' color_borde_texto='negro'">
+   <param name="G_30" value="espacio='E1' tipo='texto' color='f67c00' dibujar-si='evalua56' expresión='[550,525,600,15]' texto='Tu nota promedio es: [promedio]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='600' color_borde_texto='negro'">
+   <param name="G_31" value="espacio='E0' tipo='texto' color='ffb35c' dibujar-si='(ent(tiempo1)=ent(tiempo2))&(tiempo1>2)&(verpr=0)' expresión='[20,20,600,30]' texto='Haz clic en el botón para mostrar el promedio de tu evaluación' fuente='SansSerif,BOLD,22' decimales='evaluiaci0' fijo='sí' ancho='600' color_borde_texto='negro'">
+   <param name="G_32" value="espacio='E0' tipo='texto' color='turquesa' dibujar-si='verp' expresión='[0,80+s*30,600,120]' familia='s' s.intervalo='[1,npreguntas]' s.pasos='npreguntas-1' texto='Nota [s]: [promedio[s]]' fuente='SansSerif,PLAIN,22' decimales='0' fijo='sí' ancho='600' color_borde_texto='negro'">
+   <param name="G_33" value="espacio='E0' tipo='texto' color='verde' dibujar-si='verp=1' expresión='[20,90+(npreguntas+1)*30,600,120]' texto='Promedio: [promedio]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' ancho='600' color_borde_texto='negro'">
+   <param name="G_34" value="espacio='E1' tipo='polígono' expresión='(0,0)(0,E1._h/50)(E1._w/50,E1._h/50)(E1._w/50,0)(0,0)' ancho='10'">
+   <param name="G_35" value="espacio='mascara' tipo='polígono' color='556474' dibujar-si='muestra=1' expresión='(0,0)(0,mascara._h/50)(mascara._w/50,mascara._h/50)(mascara._w/50,0)(0,0)' ancho='10'">
+</ajs>
+<script type="descartes/vectorFile" id="textos/video.txt">
+'Escribe el código del vídeo'
+'8CUda-VITTY'
+</script>
+<script type="descartes/vectorFile" id="textos/titulo.txt">
+'Escribe el título del vídeo y la altura del fotograma no superior a 400'
+'Los animales mámiferos'
+360
+</script>
+<script type="descartes/vectorFile" id="textos/plantillas.txt">
+'Escribe los nombres de las plantillas a usar por cada pregunta, el número de plantillas debe coincidir con la cantidad de segundos de las evaluaciones'
+'Seleccion_multiple3'
+'Seleccion_multiple4'
+</script>
+<script type="descartes/vectorFile" id="textos/actividades.txt">
+'Escribe los nombres de las actividades a usar'
+'Giratorios2'
+</script>
+<script type="descartes/vectorFile" id="textos/segundos.txt">
+'Escribe los segundos transcurridos desde el inicio del vídeo hasta cada evaluación'
+90
+120
+</script>
+<script type="descartes/vectorFile" id="textos/segundosi.txt">
+'Escribe los segundos transcurridos desde el inicio del vídeo hasta cada información (debes poner 1000 en el primer dato si no vas a usarla)'
+25
+75
+</script>
+<script type="descartes/vectorFile" id="textos/segundosa.txt">
+'Escribe los segundos transcurridos desde el inicio del vídeo hasta cada actividad (debes poner 1000 en el primer dato si no vas a usarla)'
+105
+</script>
+</body>
+</html>

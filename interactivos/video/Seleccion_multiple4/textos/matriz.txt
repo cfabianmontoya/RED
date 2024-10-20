@@ -1,0 +1,9 @@
+'los animales mamíferos'
+3	
+6
+'los insectos'
+3
+3
+'los animales vertebrados'
+2
+5

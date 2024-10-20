@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Emparejamiento</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<ajs name="Descartes" width=790 height=500 code="Descartes">
+   <param name="tamaño" value="790x500">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="sonido" value="sí">
+   <param name="álgebra" value="sí">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.332, 2014-12-01">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='50' O.x='-50%' O.y='50%' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no' números='sí' sensible_a_los_movimientos_del_ratón='sí'">
+   <param name="E_02" value="tipo='R2' id='E2' dibujar-si='ver=1' fijo='sí' escala='50' O.x='-50%' O.y='50%' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no' números='sí' sensible_a_los_movimientos_del_ratón='sí'">
+   <param name="C_01" value="id='n1' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Otro ejercicio' expresión='(300,460,150,30)' fijo='sí' visible='sí' color='blanco' color-int='0062ff' negrita='sí' fuente puntos='20' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='otra=otra+1\nbuenas=buenas+OK[1]+OK[2]+OK[3]+OK[4]+OK[5]\nct=1\nima=1' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(termina=1)&(otra<5)'">
+   <param name="C_02" value="id='n2' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Resultados' expresión='(300,460,150,30)' fijo='sí' visible='sí' color='blanco' color-int='rojo' negrita='sí' fuente puntos='20' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='buenas=buenas+OK[1]+OK[2]+OK[3]+OK[4]+OK[5]\nvar9=buenas\npreg9=5\nparent.set(&squot;var9&squot;,var9)\nparent.set(&squot;preg9&squot;,preg9)\nparent.update()\nmuestra=1\n' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(termina=1)&(otra=5)&(muestra=0)' pos_mensajes='centro'">
+   <param name="C_03" value="id='n3' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(300,460,120,30)' fijo='sí' visible='sí' color='blanco' color-int='ff7e00' negrita='sí' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='ver=1\n\n' dibujar-si='(muestra>0)&(ver=0)' pos_mensajes='centro'">
+   <param name="C_04" value="id='n4' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Otro ejercicio' expresión='(300,460,120,30)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='ver=0\nbuenas1=buenas1+buenas\nmalas1=malas1+malas\nsuma=suma+buenas1+malas1\nnbuenas=nbuenas+P2[base]\nbase=base+imagenes+1\nbase=(otro=E[1])?0:base\notro=(otro=E[1])?1:otro+1\nmuestra=0\nimagenes=T[1+(otro-1)*3]*T[2+(otro-1)*3]\nminRango=1\nmaxRango=imagenes+1\nn_numeros=ent(maxRango-minRango)\ninitVecAux1()\ncreaAleatorios()\nlimpia()\nimagenes()\nasigna()\n' dibujar-si='(ver=1)&(otro<E[1])' pos_mensajes='centro'">
+   <param name="C_05" value="id='n5' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Resultado final' expresión='(300,460,120,30)' fijo='sí' visible='sí' color='blanco' color-int='azul' fuente puntos='18' imagen='_STYLE_|border=1|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=ff0000|font=sansSerif|shadowTextColor=000000|shadowBoxColor=808080' acción='calcular' parámetro='buenas1=buenas1+buenas\nmalas1=malas1+malas\nsuma=suma+buenas1+malas1\nnbuenas=nbuenas+P2[base]\nresultado1=ent((buenas1-malas1)*10/nbuenas)\nresultado1=(resultado1<0)|(nbuenas=0)?0:resultado1\nfin=1\nlimpia()\nvar1=resultado1\nparent.set(&squot;var1&squot;,var1)\nparent.update()' dibujar-si='(ver=1)&(otro=E[1])&(fin=0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='T' vector='sí' evaluar='una-sola-vez' tamaño='101' expresión='T[0]=0;T[1]=0;T[2]=0' archivo='textos/matriz.txt'">
+   <param name="A_02" value="id='E' vector='sí' evaluar='una-sola-vez' expresión='E[0]=0;E[1]=0;E[2]=0' archivo='textos/ejercicios.txt'">
+   <param name="A_03" value="id='P' vector='sí' evaluar='una-sola-vez' tamaño='40' expresión='P[0]=0;P[1]=0;P[2]=0'">
+   <param name="A_04" value="id='P1' vector='sí' evaluar='una-sola-vez' tamaño='40' expresión='P1[0]=0;P1[1]=0;P1[2]=0'">
+   <param name="A_05" value="id='P2' vector='sí' evaluar='una-sola-vez' tamaño='40' expresión='P2[0]=0;P2[1]=0;P2[2]=0' archivo='textos/palabras.txt'">
+   <param name="A_06" value="id='X' vector='sí' evaluar='una-sola-vez' tamaño='40' expresión='X[0]=0;X[1]=0;X[2]=0'">
+   <param name="A_07" value="id='Y' vector='sí' evaluar='una-sola-vez' tamaño='60' expresión='Y[0]=0;Y[1]=0;Y[2]=0'">
+   <param name="A_08" value="id='R' vector='sí' evaluar='una-sola-vez' tamaño='61' expresión='R[0]=0;R[1]=0;R[2]=0'">
+   <param name="A_09" value="id='OK' vector='sí' evaluar='una-sola-vez' tamaño='66' expresión='OK[0]=0;OK[1]=0;OK[2]=0'">
+   <param name="A_10" value="id='VecAux1' vector='sí' evaluar='una-sola-vez' tamaño='n_numeros+100' expresión='VecAux1[0]=0;VecAux1[1]=0;VecAux1[2]=0'">
+   <param name="A_11" value="id='resultadoVec' vector='sí' evaluar='una-sola-vez' tamaño='n_numeros+100' expresión='resultadoVec[0]=0;resultadoVec[1]=0;resultadoVec[2]=0'">
+   <param name="A_12" value="id='initVecAux1()' algoritmo='sí' algoritmo='sí' inicio='_indexT=0;_ancla=minRango' hacer='VecAux1[_indexT]=_ancla;_indexT=_indexT+1;_ancla=_ancla+1' mientras='_indexT<n_numeros'">
+   <param name="A_13" value="id='reacomodaVector(_posBorrar)' algoritmo='sí' algoritmo='sí' inicio='_indexAcomoda=_posBorrar' hacer='VecAux1[_indexAcomoda]=VecAux1[_indexAcomoda+1];_indexAcomoda=_indexAcomoda+1' mientras='_indexAcomoda<(n_numeros-1)'">
+   <param name="A_14" value="id='creaAleatorios()' algoritmo='sí' algoritmo='sí' inicio='initVecAux1();_indexCrearAl=0' hacer='_cuantosQuedan=(n_numeros-_indexCrearAl);_indexAleatorio=ent(rnd*_cuantosQuedan);resultadoVec[_indexCrearAl]=VecAux1[_indexAleatorio];reacomodaVector(_indexAleatorio);_indexCrearAl=_indexCrearAl+1' mientras='_indexCrearAl<n_numeros'">
+   <param name="A_15" value="id='imagenes()' algoritmo='sí' algoritmo='sí' inicio='i=0' hacer='i=i+1;P1[i]=P2[i+base]' mientras='i<imagenes'">
+   <param name="A_16" value="id='asigna()' algoritmo='sí' algoritmo='sí' inicio='i=0' hacer='i=i+1;P[i]=P1[resultadoVec[i-1]];;;;' mientras='i<imagenes'">
+   <param name="A_17" value="id='clicados()' algoritmo='sí' algoritmo='sí' inicio='i=0;buenas=0;muestra=0' hacer='i=i+1;clic=(x2>=x1)&(x2<(x1+3*T[2+(otro-1)*3]))&(y2<y1+1)&(y2>y1-T[1+(otro-1)*3])&(E1.mouse_pressed)?1:0;X[i]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1)?x2:X[i];Y[i]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1)?y2:Y[i];OK[i]=(X[i]>0)?1:0;;X[i+T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-1)?x2:X[i+T[2+(otro-1)*3]];Y[i+T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-1)?y2:Y[i+T[2+(otro-1)*3]];OK[i+T[2+(otro-1)*3]]=(X[i+T[2+(otro-1)*3]]>0)?1:0;;X[i+2*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-2)?x2:X[i+2*T[2+(otro-1)*3]];Y[i+2*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-2)?y2:Y[i+2*T[2+(otro-1)*3]];OK[i+2*T[2+(otro-1)*3]]=(X[i+2*T[2+(otro-1)*3]]>0)?1:0;;X[i+3*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-3)?x2:X[i+3*T[2+(otro-1)*3]];Y[i+3*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-3)?y2:Y[i+3*T[2+(otro-1)*3]];OK[i+3*T[2+(otro-1)*3]]=(X[i+3*T[2+(otro-1)*3]]>0)?1:0;;X[i+4*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-4)?x2:X[i+4*T[2+(otro-1)*3]];Y[i+4*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-4)?y2:Y[i+4*T[2+(otro-1)*3]];OK[i+4*T[2+(otro-1)*3]]=(X[i+4*T[2+(otro-1)*3]]>0)?1:0;;X[i+5*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-5)?x2:X[i+5*T[2+(otro-1)*3]];Y[i+5*T[2+(otro-1)*3]]=(clic=1)&(x1+(i-1)*3=x2)&(y2=y1-5)?y2:Y[i+5*T[2+(otro-1)*3]];OK[i+5*T[2+(otro-1)*3]]=(X[i+5*T[2+(otro-1)*3]]>0)?1:0;;muestra=muestra+OK[i]+OK[i+T[2+(otro-1)*3]]+OK[i+2*T[2+(otro-1)*3]]+OK[i+3*T[2+(otro-1)*3]]+OK[i+4*T[2+(otro-1)*3]]+OK[i+5*T[2+(otro-1)*3]];;buenas=buenas+(P1[resultadoVec[i-1]]=P[i])&(OK[i]=1)&(resultadoVec[i-1]<(P2[base]+1));buenas=buenas+(P1[resultadoVec[i+T[2+(otro-1)*3]-1]]=P[i+T[2+(otro-1)*3]])&(OK[i+T[2+(otro-1)*3]]=1)&(resultadoVec[i+T[2+(otro-1)*3]-1]<(P2[base]+1));buenas=buenas+(P1[resultadoVec[i+2*T[2+(otro-1)*3]-1]]=P[i+2*T[2+(otro-1)*3]])&(OK[i+2*T[2+(otro-1)*3]]=1)&(resultadoVec[i+2*T[2+(otro-1)*3]-1]<(P2[base]+1));buenas=buenas+(P1[resultadoVec[i+3*T[2+(otro-1)*3]-1]]=P[i+3*T[2+(otro-1)*3]])&(OK[i+3*T[2+(otro-1)*3]]=1)&(resultadoVec[i+3*T[2+(otro-1)*3]-1]<(P2[base]+1));buenas=buenas+(P1[resultadoVec[i+4*T[2+(otro-1)*3]-1]]=P[i+4*T[2+(otro-1)*3]])&(OK[i+4*T[2+(otro-1)*3]]=1)&(resultadoVec[i+4*T[2+(otro-1)*3]-1]<(P2[base]+1));buenas=buenas+(P1[resultadoVec[i+5*T[2+(otro-1)*3]-1]]=P[i+5*T[2+(otro-1)*3]])&(OK[i+5*T[2+(otro-1)*3]]=1)&(resultadoVec[i+5*T[2+(otro-1)*3]-1]<(P2[base]+1));malas=muestra-buenas;resultado=ent((buenas-malas)*10/(P2[base]));resultado=(resultado<0)?0:resultado;;' mientras='i<T[2+(otro-1)*3]'">
+   <param name="A_18" value="id='limpia()' algoritmo='sí' algoritmo='sí' inicio='i=0' hacer='i=i+1;P[i]=0;P1[i]=0;X[i]=0;Y[i]=0;OK[i]=0;' mientras='i<24'">
+   <param name="A_19" value="id='Aleatorio' algoritmo='sí' evaluar='una-sola-vez' hacer='minRango=6;maxRango=11;n_numeros=ent(maxRango-minRango);ima=1;'">
+   <param name="A_20" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='SOM.Top=100;SOM.Left=100;SOM.transp=0.50;SOM.rojo=0.2;SOM.verde=0.40;SOM.azul=0.93;otro=1;otra=1;minRango=1;maxRango=T[1]*T[2]+1;n_numeros=ent(maxRango-minRango);initVecAux1();creaAleatorios();imagenes=T[1]*T[2];imagenes();asigna();'">
+   <param name="A_21" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_22" value="id='CALCULOS2' algoritmo='sí' evaluar='siempre' inicio='x2=-10;y2=-10' hacer='x1=((16-3*T[2+(otro-1)*3])/2);y1=10-ent(((10-T[1+(otro-1)*3])/2));x2=x1*(E1.mouse_x>x1)+3*(E1.mouse_x>(x1+3))+3*(E1.mouse_x>(x1+6))+3*(E1.mouse_x>(x1+9));y2=ent(E1.mouse_y+1);clicados();;'">
+   <param name="A_23" value="id='e5' evento='sí' condición='ima=1' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='macro' expresión='macros/sombras.txt' nombre='SOM'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' dibujar-si='(fin=0)' expresión='(x1+(s-1)*3,y1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra0.png'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' dibujar-si='(T[1+(otro-1)*3]>1)&(fin=0)' expresión='(x1+(s-1)*3,y1-1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra0.png'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='(T[1+(otro-1)*3]>2)&(fin=0)' expresión='(x1+(s-1)*3,y1-2)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra0.png'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='(T[1+(otro-1)*3]>3)&(fin=0)' expresión='(x1+(s-1)*3,y1-3)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra0.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='(T[1+(otro-1)*3]>4)&(fin=0)' expresión='(x1+(s-1)*3,y1-4)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra0.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='(T[1+(otro-1)*3]>5)&(fin=0)' expresión='(x1+(s-1)*3,y1-5)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra0.png'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='87ff00' dibujar-si='(fin=0)' expresión='[x1*50+(s-1)*150,500-y1*50,150,50]' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' texto='[P[s]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='150' color_borde_texto='negro'">
+   <param name="G_09" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='(fin=0)' expresión='[x1*50+(s-1)*150,550-y1*50,150,50]' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' texto='[P[T[2+(otro-1)*3]+s]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='150' color_borde_texto='negro'">
+   <param name="G_10" value="espacio='E1' tipo='texto' color='grisClaro' dibujar-si='(T[1+(otro-1)*3]>2)&(fin=0)' expresión='[x1*50+(s-1)*150,600-y1*50,150,50]' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' texto='[P[2*T[2+(otro-1)*3]+s]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='150' color_borde_texto='rojo'">
+   <param name="G_11" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='(T[1+(otro-1)*3]>3)&(fin=0)' expresión='[x1*50+(s-1)*150,650-y1*50,150,50]' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' texto='[P[3*T[2+(otro-1)*3]+s]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='150' color_borde_texto='azul'">
+   <param name="G_12" value="espacio='E1' tipo='texto' color='ff5300' dibujar-si='(T[1+(otro-1)*3]>4)&(fin=0)' expresión='[x1*50+(s-1)*150,700-y1*50,150,50]' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' texto='[P[4*T[2+(otro-1)*3]+s]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='150' color_borde_texto='negro'">
+   <param name="G_13" value="espacio='E1' tipo='texto' color='87ff00' dibujar-si='(T[1+(otro-1)*3]>5)&(fin=0)' expresión='[x1*50+(s-1)*150,750-y1*50,150,50]' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' texto='[P[5*T[2+(otro-1)*3]+s]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='150' color_borde_texto='negro'">
+   <param name="G_14" value="espacio='E1' tipo='imagen' dibujar-si='(x2>=x1)&(x2<(x1+3*T[2+(otro-1)*3]))&(y2<y1+1)&(y2>y1-T[1+(otro-1)*3])' expresión='(x2,y2)' archivo='images/palabra2.png'">
+   <param name="G_15" value="espacio='E1' tipo='imagen' dibujar-si='(OK[s]=1)&(ver=0)' expresión='(x1+(s-1)*3,y1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra1.png'">
+   <param name="G_16" value="espacio='E1' tipo='imagen' dibujar-si='(OK[s+T[2+(otro-1)*3]]=1)&(ver=0)' expresión='(x1+(s-1)*3,y1-1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra1.png'">
+   <param name="G_17" value="espacio='E1' tipo='imagen' dibujar-si='(OK[s+2*T[2+(otro-1)*3]]=1)&(ver=0)' expresión='(x1+(s-1)*3,y1-2)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra1.png'">
+   <param name="G_18" value="espacio='E1' tipo='imagen' dibujar-si='(OK[s+3*T[2+(otro-1)*3]]=1)&(ver=0)' expresión='(x1+(s-1)*3,y1-3)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra1.png'">
+   <param name="G_19" value="espacio='E1' tipo='imagen' dibujar-si='(OK[s+4*T[2+(otro-1)*3]]=1)&(ver=0)' expresión='(x1+(s-1)*3,y1-4)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra1.png'">
+   <param name="G_20" value="espacio='E1' tipo='imagen' dibujar-si='(OK[s+5*T[2+(otro-1)*3]]=1)&(ver=0)' expresión='(x1+(s-1)*3,y1-5)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra1.png'">
+   <param name="G_21" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s-1]]=P[s])&(OK[s]=1)&(resultadoVec[s-1]<(P2[base]+1))&(ver=1)' expresión='(x1+(s-1)*3,y1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra3.png'">
+   <param name="G_22" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+T[2+(otro-1)*3]-1]]=P[s+T[2+(otro-1)*3]])&(OK[s+T[2+(otro-1)*3]]=1)&(resultadoVec[s+T[2+(otro-1)*3]-1]<(P2[base]+1))&(ver=1)' expresión='(x1+(s-1)*3,y1-1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra3.png'">
+   <param name="G_23" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+2*T[2+(otro-1)*3]-1]]=P[s+2*T[2+(otro-1)*3]])&(OK[s+2*T[2+(otro-1)*3]]=1)&(resultadoVec[s+2*T[2+(otro-1)*3]-1]<(P2[base]+1))&(ver=1)' expresión='(x1+(s-1)*3,y1-2)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra3.png'">
+   <param name="G_24" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+3*T[2+(otro-1)*3]-1]]=P[s+3*T[2+(otro-1)*3]])&(OK[s+3*T[2+(otro-1)*3]]=1)&(resultadoVec[s+3*T[2+(otro-1)*3]-1]<(P2[base]+1))&(ver=1)' expresión='(x1+(s-1)*3,y1-3)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra3.png'">
+   <param name="G_25" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+4*T[2+(otro-1)*3]-1]]=P[s+4*T[2+(otro-1)*3]])&(OK[s+4*T[2+(otro-1)*3]]=1)&(resultadoVec[s+4*T[2+(otro-1)*3]-1]<(P2[base]+1))&(ver=1)' expresión='(x1+(s-1)*3,y1-4)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra3.png'">
+   <param name="G_26" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+5*T[2+(otro-1)*3]-1]]=P[s+5*T[2+(otro-1)*3]])&(OK[s+5*T[2+(otro-1)*3]]=1)&(resultadoVec[s+5*T[2+(otro-1)*3]-1]<(P2[base]+1))&(ver=1)' expresión='(x1+(s-1)*3,y1-5)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra3.png'">
+   <param name="G_27" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s-1]]=P[s])&(OK[s]=1)&(resultadoVec[s-1]>(P2[base]))&(ver=1)' expresión='(x1+(s-1)*3,y1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra4.png'">
+   <param name="G_28" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+T[2+(otro-1)*3]-1]]=P[s+T[2+(otro-1)*3]])&(OK[s+T[2+(otro-1)*3]]=1)&(resultadoVec[s+T[2+(otro-1)*3]-1]>(P2[base]))&(ver=1)' expresión='(x1+(s-1)*3,y1-1)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra4.png'">
+   <param name="G_29" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+2*T[2+(otro-1)*3]-1]]=P[s+2*T[2+(otro-1)*3]])&(OK[s+2*T[2+(otro-1)*3]]=1)&(resultadoVec[s+2*T[2+(otro-1)*3]-1]>(P2[base]))&(ver=1)' expresión='(x1+(s-1)*3,y1-2)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra4.png'">
+   <param name="G_30" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+3*T[2+(otro-1)*3]-1]]=P[s+3*T[2+(otro-1)*3]])&(OK[s+3*T[2+(otro-1)*3]]=1)&(resultadoVec[s+3*T[2+(otro-1)*3]-1]>(P2[base]))&(ver=1)' expresión='(x1+(s-1)*3,y1-3)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra4.png'">
+   <param name="G_31" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+4*T[2+(otro-1)*3]-1]]=P[s+4*T[2+(otro-1)*3]])&(OK[s+4*T[2+(otro-1)*3]]=1)&(resultadoVec[s+4*T[2+(otro-1)*3]-1]>(P2[base]))&(ver=1)' expresión='(x1+(s-1)*3,y1-4)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra4.png'">
+   <param name="G_32" value="espacio='E1' tipo='imagen' dibujar-si='(P1[resultadoVec[s+5*T[2+(otro-1)*3]-1]]=P[s+5*T[2+(otro-1)*3]])&(OK[s+5*T[2+(otro-1)*3]]=1)&(resultadoVec[s+5*T[2+(otro-1)*3]-1]>(P2[base]))&(ver=1)' expresión='(x1+(s-1)*3,y1-5)' familia='s' s.intervalo='[1,T[2+(otro-1)*3]]' s.pasos='T[2+(otro-1)*3]-1' archivo='images/palabra4.png'">
+   <param name="G_33" value="espacio='E1' tipo='texto' color='ff6d00' dibujar-si='fin=0' expresión='[0,30,790,20]' texto='Haz clic sobre [T[0+(otro-1)*3]]' fuente='SansSerif,BOLD,30' fijo='sí' ancho='790' color_borde_texto='negro'">
+   <param name="G_34" value="espacio='E2' tipo='texto' color='verde' dibujar-si='(ver=1)&(fin=0)' expresión='[20,400,300,20]' texto='Tienes [buenas] aciertos de [P2[base]]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='300' color_borde_texto='grisObscuro'">
+   <param name="G_35" value="espacio='E2' tipo='texto' color='rojo' dibujar-si='(ver=1)&(malas!=1)&(fin=0)' expresión='[20,430,300,20]' texto='Tienes [malas] errores' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='300' color_borde_texto='grisObscuro'">
+   <param name="G_36" value="espacio='E2' tipo='texto' color='rojo' dibujar-si='(ver=1)&(malas=1)&(fin=0)' expresión='[20,430,300,20]' texto='Tienes [malas] error' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='300' color_borde_texto='grisObscuro'">
+   <param name="G_37" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='(ver=1)&(fin=0)' expresión='[20,460,300,20]' texto='Tu nota es [resultado] de 10' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='300' color_borde_texto='negro'">
+   <param name="G_38" value="espacio='E1' tipo='imagen' dibujar-si='(ver=0)&(fin=0)' expresión='(14,1,-.6,.6)' archivo='images/muchacha4.png'">
+   <param name="G_39" value="espacio='E1' tipo='imagen' dibujar-si='(ver=1)&(resultado<6)&(fin=0)' expresión='(14,1,.6,.6)' archivo='images/muchacha3.png'">
+   <param name="G_40" value="espacio='E1' tipo='imagen' dibujar-si='(ver=1)&(resultado>5)&(fin=0)' expresión='(14,1,.6,.6)' archivo='images/muchacha2.png'">
+   <param name="G_41" value="espacio='E1' tipo='texto' color='verde' dibujar-si='fin' expresión='[20,0,790,500]' texto='Respuestas correctas: [buenas1] de [nbuenas]' fuente='SansSerif,PLAIN,30' decimales='0' fijo='sí' ancho='790' color_borde_texto='negro'">
+   <param name="G_42" value="espacio='E1' tipo='texto' color='rojo' dibujar-si='fin' expresión='[20,40,790,500]' texto='Respuestas incorrectas: [malas1]' fuente='SansSerif,PLAIN,30' decimales='0' fijo='sí' ancho='790' color_borde_texto='negro'">
+   <param name="G_43" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='fin' expresión='[20,80,790,500]' texto='Nota final: [resultado1] de 10' fuente='SansSerif,PLAIN,30' decimales='0' fijo='sí' ancho='790' color_borde_texto='negro'">
+   <param name="G_44" value="espacio='E1' tipo='texto' color='negro' dibujar-si='fin' expresión='[40,0,700,200]' texto='El resultado se obtiene, teniendo en cuenta que un error se resta al total de aciertos' fuente='SansSerif,PLAIN,26' decimales='0' fijo='sí' ancho='700' color_borde_texto='ff000000'">
+   <param name="G_45" value="espacio='E1' tipo='imagen' dibujar-si='(ver=1)&(resultado1<6)&(fin=1)' expresión='(14,3,1,1)' archivo='images/muchacha3.png'">
+   <param name="G_46" value="espacio='E1' tipo='imagen' dibujar-si='(ver=1)&(resultado1>5)&(fin=1)' expresión='(14,3,1,1)' archivo='images/muchacha2.png'">
+   <param name="Animación" value="controles='no' auto='no' inicio='ggg=0;ima=0' hacer='ggg=ggg+1' mientras='ggg<20'">
+</ajs>
+<script type="descartes/vectorFile" id="textos/ejercicios.txt">
+'Ingresa la cantidad de ejercicios a realizar'
+2
+</script>
+<!--En este archivo escribimos, por cada ejercicio: el texto para el título, el primer número que corresponde al número de filas (máximo 6)y el segundo número que corresponde al número de columnas (máximo 4)-->
+<script type="descartes/vectorFile" id="textos/matriz.txt">
+'los animales mamíferos'
+3
+2
+'los animales mamíferos'
+3
+3
+</script>
+<!--En este archivo escribimos, por cada ejercicio: Un primer número que indica cuantas palabras son las correctas, luego las palabras que hacen verdadero el texto para el título, finalmente el resto de palabras. El total de palabras debe ser igual al producto de filas por columnas.  -->
+<script type="descartes/vectorFile" id="textos/palabras.txt">
+
+4
+'Ratón'
+'Ballena'
+'Elefante'
+'Gato'
+'Grillo'
+'Tortuga'
+
+5
+'Perro'
+'Leopardo'
+'Rinoceronte'
+'Cabra'
+'Chimpancé'
+'Águila'
+'Loro'
+'Serpiente'
+'Tortuga'
+
+</script>
+<script type="descartes/macro" id="macros/sombras.txt">
+tipo_de_macro=R2
+Idioma=español
+id='W' constante='sí' expresión='790' evaluar='una-sola-vez'
+id='H' constante='sí' expresión='500' evaluar='una-sola-vez'
+id='Top' constante='sí' expresión='400' evaluar='una-sola-vez'
+id='Left' constante='sí' expresión='300' evaluar='una-sola-vez'
+id='transp' constante='sí' expresión='0.8' evaluar='una-sola-vez'
+id='rojo' constante='sí' expresión='0.28' evaluar='una-sola-vez'
+id='verde' constante='sí' expresión='0.6' evaluar='una-sola-vez'
+id='azul' constante='sí' expresión='0.93' evaluar='una-sola-vez'
+tipo='curva' color='(rojo,verde,azul,transp)' coord_abs='sí' expresión='((t<=1)?Top*t^2:Top*(1-t),(t<=1)?Left*(1-sqrt(1-(1-t^2)^2)):0)' t.intervalo='[0,2]' t.pasos='64' relleno='(rojo,verde,azul,transp)' ancho='0' visible='no' 
+tipo='curva' color='(rojo,verde,azul,transp)' coord_abs='sí' expresión='((t<=1)?W-Top*t^2:W-Top*(1-t),(t<=1)?H-Left*(1-sqrt(1-(1-t^2)^2)):H)' t.intervalo='[0,2]' t.pasos='64' relleno='(rojo,verde,azul,transp)' ancho='0' visible='no' 
+
+</script>
